@@ -27,7 +27,6 @@ import javax.swing.BoxLayout;
                 boton.setActionCommand(opciones[i]);
                 listaGlobalBotones.add(boton);
                 boton.addItemListener(new AccionManager(listaGlobalBotones));
-                boton.setSelected(i==0);
                 add(boton);
             }
         }

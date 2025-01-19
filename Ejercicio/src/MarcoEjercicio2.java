@@ -13,7 +13,5 @@ class MarcoEjercicio2 extends JFrame{
         setSize(600, 400);
         setLayout(new GridLayout(2,3));
         
-
-        
     }
 }
