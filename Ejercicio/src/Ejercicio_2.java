@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,12 +10,20 @@ public class Ejercicio_2 {
         List<JRadioButton> listaGlobalBotones = new ArrayList<>();
 
        MarcoEjercicio2 miMarco = new MarcoEjercicio2();
-       
+
+       LaminaSuperior laminaSuperior = new LaminaSuperior();
+
        LaminaCuadrante[] laminas = new LaminaCuadrante("", new String[0], listaGlobalBotones).createLaminaCuadrante();
        
+       LaminaBoton laminaBoton = new LaminaBoton(listaGlobalBotones, miMarco);
+
        for(LaminaCuadrante elemento: laminas){
-           miMarco.add(elemento);
+           laminaSuperior.add(elemento);
         }
+
+        miMarco.add(laminaSuperior, BorderLayout.CENTER);
+        miMarco.add(laminaBoton, BorderLayout.SOUTH);
+
         miMarco.setVisible(true);
 
        
